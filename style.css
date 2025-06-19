@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.3);
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #f0f0f0;
+}
+
+.boton-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.boton-categoria {
+  font-family: 'Orbitron', sans-serif;
+  background: transparent;
+  color: #00ffe7;
+  border: 2px solid #00ffe7;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.boton-categoria::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #00ffe7, #3366ff);
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.boton-categoria:hover::before {
+  width: 100%;
+}
+
+.boton-categoria:hover {
+  color: #000;
+  box-shadow: 0 0 15px #00ffe7;
+}
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.producto {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease both;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #00ffff;
+}
+
+.producto img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.producto h3 {
+  font-size: 1.4em;
+  margin: 15px 10px 5px;
+  color: #00ffe7;
+}
+
+.producto p {
+  font-size: 1.1em;
+  margin: 0 10px 10px;
+  color: #ccc;
+}
+
+.producto a {
+  display: block;
+  margin: 15px 20px;
+  padding: 12px;
+  text-align: center;
+  background: linear-gradient(90deg, #00ffe7, #3366ff);
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.producto a:hover {
+  background: linear-gradient(90deg, #3366ff, #00ffe7);
+  color: #000;
+}
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.titulo-impacto {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7, 0 0 15px #00ffe7, 0 0 30px #00ffe7;
+  margin: 40px 20px;
+  animation: brilloNeon 2s ease-in-out infinite alternate;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Animación de brillo */
+@keyframes brilloNeon {
+  from {
+    text-shadow: 0 0 5px #00ffe7, 0 0 15px #00ffe7, 0 0 30px #00ffe7;
+  }
+  to {
+    text-shadow: 0 0 10px #00ffe7, 0 0 25px #00ffe7, 0 0 40px #00ffe7;
+  }
+}
+
